@@ -9,7 +9,7 @@ using namespace std;
   * 3 - Return object from function. 
 */
 
-class MyNumber {
+class MyNumber {  
   private:
     int *val1;
     int val2;
@@ -22,7 +22,7 @@ class MyNumber {
       val2 = y;
     }
 
-    // Without reference will make compilation error.
+    // Without reference will make compilation error, because it will passed to private function, make infinite recursion.
     MyNumber(const MyNumber &another) {
       cout << "Copy constructor\n";
       val1 = new int;
